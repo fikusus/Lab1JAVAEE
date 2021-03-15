@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+    <context:component-scan base-package="org.example.impls.Car"/>
+    <import resource="BOSCH.xml"></import>
+    <import resource="osram.xml"></import>
+    <bean id="BMW" class="org.example.impls.Car.CarImpl" scope="prototype">
+        <property name="engine" ref="boschEngine"/>
+        <property name="body" ref="boschBody"/>
+        <property name="audioSystem" ref="boschAudioSystem"/>
+        <property name="wheels" ref="boschWheels"/>
+        <property name="battery" ref="boschBattery"/>
+        <property name="name" value="BMW"/>
+    </bean>
+
+    <bean id="Audi" class="org.example.impls.Car.CarImpl" scope="prototype">
+        <property name="engine" ref="osramEngine"/>
+        <property name="body" ref="boschBody"/>
+        <property name="audioSystem" ref="osramAudioSystem"/>
+        <property name="wheels" ref="boschWheels"/>
+        <property name="battery" ref="osramBattery"/>
+        <property name="name" value="Audi"/>
+    </bean>
+
+    <bean id="Cadillac" class="org.example.impls.Car.CarImpl" scope="prototype">
+        <property name="engine" ref="osramEngine"/>
+        <property name="body" ref="osramBody"/>
+        <property name="audioSystem" ref="osramAudioSystem"/>
+        <property name="wheels" ref="osramWheels"/>
+        <property name="battery" ref="osramBattery"/>
+        <property name="name" value="Cadillac"/>
+    </bean>
+
+</beans>

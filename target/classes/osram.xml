@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+">
+
+    <bean id="osramEngine" class="org.example.impls.OSRAM.EngineImpl" scope="prototype"/>
+    <bean id="osramBody" class="org.example.impls.OSRAM.BodyImpl" scope="prototype"/>
+    <bean id="osramBattery" class="org.example.impls.OSRAM.BatteryImpl" scope="prototype"/>
+    <bean id="osramWheels" class="org.example.impls.OSRAM.WheelsImpl" scope="prototype"/>
+    <bean id="osramAudioSystem" class="org.example.impls.OSRAM.AudioSystemImpl" scope="prototype"/>
+
+</beans>

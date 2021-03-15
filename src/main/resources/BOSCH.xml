@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+">
+
+    <bean id="boschEngine" class="org.example.impls.BOSCH.EngineImpl" scope="prototype"/>
+    <bean id="boschBody" class="org.example.impls.BOSCH.BodyImpl" scope="prototype"/>
+    <bean id="boschBattery" class="org.example.impls.BOSCH.BatteryImpl" scope="prototype"/>
+    <bean id="boschWheels" class="org.example.impls.BOSCH.WheelsImpl" scope="prototype"/>
+    <bean id="boschAudioSystem" class="org.example.impls.BOSCH.AudioSystemImpl" scope="prototype"/>
+
+
+</beans>
